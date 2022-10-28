@@ -1,0 +1,54 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "group": "build",
+      "type": "shell",
+      "command": "sh",
+      "args": [
+        "dip.sh",
+        "./data/color-bars.png",
+        "./processors/null.ts",
+        "./tmp/color-bars.png",
+        "-p",
+        "foo=bar",
+        "-s",
+        "colorBars=./data/color-bars.png"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$deno"],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    },
+    {
+      "label": "Test",
+      "group": "test",
+      "type": "shell",
+      "command": "sh",
+      "args": [
+        "test.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$deno"],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "dip": "./src/mod.ts"
+  }
+}
